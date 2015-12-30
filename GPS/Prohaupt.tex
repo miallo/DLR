@@ -169,6 +169,56 @@ Die Positionsbestimmung auf der Erde ist essentiell für weite Reisen.
 Daher haben schon die Ägypter mit relativ einfachen Mitteln den Umfang der Erde bestimmt.
 Heutzutage wird meist mit GPS-Satelliten navigiert.
 
+\section{Fucaultsches Pendel}
+
+Das Fucaultsche Pendel bezeichnet ein sehr langes Pendel, welches ungestört pendeln kann.
+Teilweise gibt es Ausführungen, welche die Verzögerung aufheben, aber auch diese beeinflussen nicht die Richtung, in die es schwingt.
+Die Tangentialkomponente der Gewichtskraft lautet $F_\text{tan. Grav.}=mg\ddot\varphi$.
+Ein Pendel lässt sich in der Näherung der kleinen Auslenkwinkel beschreiben durch $F_\text{tan. Grav.}\approx mg\varphi$
+Die Differentialgleichung, welche man nun erhält, lässt sich durch $\varphi=A\cos\omega t$ lösen.
+Wobei $A$ die Auslenkung ist und $\omega=\sqrt\frac{g}{l}$ die Kreisfrequenz ist.
+Eine Periodendauer ist also
+\begin{align}
+	T&=\frac{2\pi}{\omega}=\sqrt\frac{l}{g}\label{eq:pendelPeriode}\\
+	\Leftrightarrow g&=4\pi^2\frac{l}{T^2}
+\end{align}
+mit der Gaußschen Fehlerfortpflanzung $\sigma_g=\frac{4\pi^2}{T^2}\sqrt{\sigma_l^2+\left(\frac{2l}{T} \right)^2\sigma_T^2}$.
+Da die berechnete Erdbeschleuningung nur von Seillänge und gemessener Periodendauer abhängen soll und nicht von der Masse des Pendels, reicht es, mit einer einzigen Masse zu messen.
+
+Die sich ergebenden Werte sind in Tabelle \ref{tab:gbesch} zu finden.
+Es ergeben sich die in Grafik \ref{fig:gbesch} aufgetragenen Werte für die Erdbeschleunigung zusammen mit dem gemittelten Wert.
+Dabei wurden als Fehler $\sigma_l=1\si{\centi\meter}$ und $\sigma_T=0.01\si\second$ angenommen.
+Die Periodendauer wurde mit zwei Uhren gleichzeigig gestoppt und dann gemittelt, um Reaktionsfehler zu minimieren.
+Außerdem wurde über 10 Perioden gemittelt, was ebenfalls die Präzision steigert.
+
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Seil- & Perioden- \\
+		länge [m] & dauer [s] \\
+		\hline
+		$0.6$ & $1.55$\\
+		$0.8$ & $1.79$\\
+		$1.0$ & $2.025$\\
+		$1.2$ & $2.165$\\
+		\hline
+	\end{tabular}
+	\caption{Bestimmung der Erdbeschleunigung: Periodendauer des Pendels zu bestimmten Seillängen.}
+	\label{tab:gbesch}
+\end{table}
+
+\begin{figure}[!htb]
+	\centering
+	\input{gbesch.tex}
+	\caption{Berechnung der Erdbeschleunigung aus verschiedenen Periodendauern bei unterschiedlichen Seillängen und Mittelwert der Messungen.}
+	\label{fig:gbesch}
+\end{figure}
+
+Lässt man es nun (nicht in der Nähe des Äquators) schwingen, so stellt man erstaunlicher Weise fest, dass das Pendel langsam seine Schwingungsebene dreht.
+Dieser Effekt lässt sich durch die Corioliskraft erklären.
+
 \section{"`Fuß-GPS"'}
 Das Funktionsprinzip von GPS kann man durch ein einfaches Experiment nachstellen:
 Wenn drei Leute von bekannten Positonen aus zu einer vierten Person laufen, deren Ort unbekannt ist.
@@ -195,17 +245,15 @@ Die tatsächliche Position der Zielperson liegt tatsächlich relativ genau zwisc
 \end{figure}
 
 \section{Bestimmung des Erdumfangs}
-Schon die *****************************  maß vor über 3000 Jahren ********************************************************
-den Umfang der Erde, als er bemerkte, dass genau zur Sonnenwende in *************************
-ein Brunnen keinen Schatten im inneren hatte.
-Zur selben Zeit jedoch in Alexandria (ca. 700km nördlicher gelegen) warf ein Turm einen Schatten.
+Schon Eratosthenes maß 200 v.Chr. den Umfang der Erde, als er bemerkte, dass genau zur Sonnenwende in Syene ein Brunnen keinen Schatten im inneren hatte.
+Zur selben Zeit jedoch in Alexandria (ca. 790km nördlicher gelegen, aber nicht auf dem selben Längengrad, wesshalb die Luftlinie ca. 840km beträgt) warf ein Turm einen Schatten.
 Wäre die Erde eine Scheibe, so wäre dies nicht möglich bei dem riesigen Abstand, den die Sonne zur Erde hat.
 Er bestimmte nun die Entfernung mit Hilfe eines Sklaventrupps, der die Strecke abging und durch Lederriemen in der Schrittlänge begrenzt war.
 Dadurch konnte die Entfernung in Längeneinheiten dieser Schritte angegeben werden.
 Da jedoch nicht die Luftlinie interessant war und auch diese durch Hindernisse nicht direkt zu bestimmen war, mussten die Sklaven immer genau in Nord-Süd-Richtung oder Ost-West-Richtung laufen.
 
-Aus Höhe des Turms und Länge des Schattens ließ sich ein Winkel berechnen, der, wie in Abb. \ref{fig:umfang} zu sehen, so auch im Erdinneren zwischen den Orten vorhanden ist.
-
+Aus Höhe des Turms und Länge des Schattens ließ sich der Winkel berechnen ($7^\circ11"$), der, wie in Abb. \ref{fig:umfang} zu sehen, so auch im Erdinneren zwischen den Orten vorhanden ist.
+Daraus kann man herleiten, dass die 790km einem fünfzigstel des Erdumfangs entsprechen.
 
 
 
