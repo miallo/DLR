@@ -258,7 +258,7 @@ Aus der Euler-Gleichung
 \begin{align*}
 	\frac{\partial\vec v}{\partial t}+(\vec v\cdot\nabla)\vec v = -\frac{1}{\rho}\nabla p+\vec g
 \end{align*}
-geht im stationären und statischen Fall hervor, dass der Druck logarithmisch mit anwachsender Höhe abnimmt, da die linke Seite verschwindet.
+geht im stationären und statischen Fall (das Geschwindigkeitsfeld verändert sich nicht) hervor, dass der Druck logarithmisch mit anwachsender Höhe abnimmt, da die linke Seite verschwindet.
 Es folgt
 \begin{align*}
 	\nabla p&=-\rho\vec g\\
@@ -270,7 +270,23 @@ Es ergibt sich die Barometrische Höhenformel
 \begin{align}
 	\delta z(h)=h_s\ln\frac{p(h_0)}{p(h)}
 \end{align}
-mit $\Delta z$ als Höhendifferenz zwischen $h$ und $h_0$ und $h_s=\frac{pm}{RT}$.
+mit $\Delta z$ als Höhendifferenz zwischen $h$ und $h_0$ und $h_s=\frac{pm}{RT}$ (der Druckscalenhöhe).
+
+Bei der Messung stellten wir fest, dass das Messgerät sehr sensibel war, was die Temperatur angeht.
+So haben wir auf dem Boden des Erdgeschosses angefangen, sind dann stück für Stück hoch gegangen und haben abschließend erneut eine Messung im Erdgeschoss gemacht.
+Es stellte sich heraus, dass das Gerät von $1014.15\si{\hecto\pascal}$ auf $1013.92\si{\hecto\pascal}$ gefallen ist.
+Dies mag nicht viel erscheinen, entspricht aber einer Höhendifferenz von rein theoretisch ca. $2\si\meter$.
+Dies ist vermutlich nicht darauf zurückzuführen, dass sich der Umgebungsdruck verändert hat, sonder hängt vermutlich damit zusammen, dass sich das Messgerät abgekühlt hat, weil wir es auf den Boden gelegt haben.
+
+In der Abb. \ref{fig:hoehe} ist die aus dem Druck berechnete gegen die gemessene Höhe aufgetragen.
+
+\begin{figure}[h]
+	\centering
+	\input{hoehe}
+	\caption{Auftragung der aus dem Druck berechneten gegen die gemessene Höhe.}
+	\label{fig:hoehe}
+\end{figure}
+
 
 
 
