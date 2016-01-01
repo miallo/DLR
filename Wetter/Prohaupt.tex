@@ -180,18 +180,19 @@ Das Wetter am Nachmittag des 7. Dezember 2015 war geprägt durch Bewölkung mit 
 Die überwiegende Wolkenschicht bestand aus \textit{Stratus}-Wolken, wie in Bild \ref{fig:wolkenNord} zu sehen.
 Zusätzlich waren in den Löchern der Schicht \textit{Alto-Cumulus}-Wolken zu sehen.
 
-Die Temperatur lag bei $10\si\celsius$ und es war windstill.
+Die Temperatur lag bei $10\si\celsius$ und es war am Boden windstill.
+Auch die Windgeschwindigkeit in Wolkenhöhe war gering, was auf eine relativ stabile Wetterlage hindeutet.
 
-% \begin{figure}[h]
-%   \centering
-%   \subfigure[Blick Richtung Norden. Zu sehen: Stratuswolken, welche vereinzelt aufreißen und Alto-Cumulus zeigen.\label{fig:wolkenNord}]
-%   {\includegraphics[width=0.49\textwidth]{wolkenNord}}
-%   \hfill
-%   \subfigure[Beschriftung 2\label{fig:wolkenSued}]
-%   {\includegraphics[width=0.49\textwidth]{wolkenSued}}
-%   \caption{Beschriftung allgemein}
-%   \label{fig:label-gesamt}
-% \end{figure}
+\begin{figure}[h]
+  \centering
+  \subfigure[Blick Richtung Süden. Zu erkennen sind hauptsächlich Stratuswolken.\label{fig:wolkenSued}]
+  {\includegraphics[width=0.49\textwidth, angle=180, origin=c]{wolkenSued}}
+  \hfill
+  \subfigure[Blick Richtung Norden. Zu sehen: Stratuswolken, welche vereinzelt aufreißen und Alto-Cumulus zeigen.\label{fig:wolkenNord}]
+  {\includegraphics[width=0.49\textwidth, angle=180, origin=c]{wolkenNord}}
+  \caption{Wolken über Göttingen am 7. Dezember 2015.}
+  \label{fig:label-gesamt}
+\end{figure}
 
 \section{Aktuelle Wetterkarten}
 Die Windstille war auch auf der Wetterkarte zu erkennen, da im Bereich von Göttingen die Dichte der Isobaren sehr gering war.
@@ -253,6 +254,22 @@ Daher ist der hohe Wert bei 6 cm vermutlich durch einen Spitzenwert und nicht du
    \caption{Radiales Geschwindigkeitsprofil eines Modelltornados\label{fig:tornado}}
  \end{figure}
 
+ \begin{table}[!htb]
+ 	\centering
+ 	\begin{tabular}{|c||c|c||c|c|}
+ 	\hline
+			 	& \multicolumn{2}{c|}{Burgers-Rott}	 	& \multicolumn{2}{c||}{Rankine} 		\\
+ 				& $20\,$cm 		& $30\,$cm	 	& $20\,$cm 		& $30\,$cm 		\\
+ 	\hline                                                           
+ 	$\omega$ [s$^{-1}$]	& $2.3 \pm 0.4$ 	& $2.2 \pm 0.4$	 	& $1.15 \pm 0.16$ 	& $1.2 \pm 0.4$ 	\\
+ 	$R$ [cm]           	& $5.3 \pm 0.7$ 	& $6.0 \pm 0.7 $ 	& $7.9 \pm 0.8$ 	& $8.3 \pm 1.6$ 	\\
+ 	$\Delta$ [cm]       	& $1.7  \pm 0.5$ 	& $ 1.4 \pm 0.5$ 	& $3.2 \pm 0.7$ 	& $2.9 \pm 1.2$ 	\\
+ 	\hline
+ 	\end{tabular}
+	\caption{Aus dem Fit der jeweiligen Modelle bestimmte Parameter des Modelltornados.}
+ 	\label{tab:tornado}
+ \end{table}
+
 \section{Höhenabhängigkeit des Drucks}
 Aus der Euler-Gleichung
 \begin{align*}
@@ -279,6 +296,10 @@ Dies mag nicht viel erscheinen, entspricht aber einer Höhendifferenz von rein t
 Dies ist vermutlich nicht darauf zurückzuführen, dass sich der Umgebungsdruck verändert hat, sonder hängt vermutlich damit zusammen, dass sich das Messgerät abgekühlt hat, weil wir es auf den Boden gelegt haben.
 
 In der Abb. \ref{fig:hoehe} ist die aus dem Druck berechnete gegen die gemessene Höhe aufgetragen.
+Für eine perfekte Übereinstimmung sollten also alle Werte auf der Winkelhalbierenden liegen, welche auch eingezeichnet ist.
+ZU erkennen ist einerseits, dass wir auf dem Boden zweimal die Höhe gemessen haben und dass die meisten Werte gut übereinstimmen.
+Der höchste Wert ist auch um ca. 2 m niedriger, als tatsächlich, was sich vermutlich wieder durch die Temperatur des Messgerätes erklären lässt.
+
 
 \begin{figure}[h]
 	\centering
