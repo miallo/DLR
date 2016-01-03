@@ -181,18 +181,48 @@ Andererseits sind natürlich auch militärische Einsatzzwecke denkbar.
 
 \section{Schallortung}
 Die Schallortung mit Hilfe von zwei Mikrophonen ist komplizierter, als mit einem ganzen Array, auch wenn dadurch weniger Rechenarbeit notwendig ist.
-So haben wir zunächst die Wellenlänge der monotonen Schallquelle bestimmt, in dem wir die zwei Mikrophone dicht nebeneinander gehalten haben, so dass zunächst kein Phasenunterschied feststellbar war.
-Dann haben wir das eine relativ zu dem anderen bewegt, wodurch ein Phasenunterschied auftrat.
+Man benötigt zwei Mikrophone, welche man an ein Oszilloskop anschließen muss.
+Zunächst wird die Wellenlänge der reinen Sinus-Schallquelle bestimmt, in dem man die zwei Mikrophone dicht nebeneinander hält, so dass zunächst kein Phasenunterschied feststellbar ist.
+Dann wird das eine relativ zu dem anderen bewegt, wodurch ein Phasenunterschied auftritt.
 Nach einer Wellenlänge ist dieser (Modulo $2\pi$) wieder verschwunden.
 Dann kann man den Abstand der Mikrophone bestimmen und damit die Wellenlänge.
-Heraus kam
+Heraus kam eine Wellenlänge von $\lambda=1.7\si{\centi\meter}$, was bei einer Schallgeschwindigkeit von $c=340\si{\meter\per\second}$ einer Frequenz $\nu=\frac{c}{\lambda}=20\si{\kilo\hertz}$ entspricht.
+Für Menschen ist dies unhörbar.
+
+Zur Ortung der Schallquelle werden die zwei Mikrophone parallel auf einer Schiene befestigt.
+Möchte man eine mögliche Schallquelle überprüfen, so stellt man die Schiene senkrecht zur Achse der Quelle.
+Da der Abstand zwischen Quelle und Mikrophonen groß im Vergleich zur Ausdehnung der Quelle ist, können die Wellen als eben angenommen werden.
+Dies bedeutet, dass die Wellenfronten in guter Näherung als parallele Geraden ankommen.
+Kommt der Schall tatsächlich von dieser Quelle, so schiebt man das Mikrofon entlang der Schiene nur auf der selben Wellenfront hin und her.
+Es gibt keinen Phasenverschub.
+Kommt der Schall jedoch von einer anderen Quelle, so wird das eine Mikrophon eine andere Phase aufweisen.
+
+\subsection{Schallordnung und Winkelauflösung beim Menschen}
+Der Mensch ortet Schall auf eine ähnliche weise.
+Kommt ein Schallsignal von der Seite an, so empfängt das dichtere Ohr den Ton einen Sekundenbruchteil früher, als das andere.
+Dies kann das Gehirn interpretieren als Richtung, obwohl die "`Signalverarbeitung"' im Gehirn deutlich länger dauert, als die Laufzeitunterschiede.
+
+Möchte man feststellen, wie groß die Winkelauflösung einer Person ist, so kann man zwei (möglichst) gleiche Schallquellen $A$ und $B$ im Abstand $s$ positionieren.
+Die Versuchsperson steht im Abstand $l$ von den beiden entfernt.
+Nun geben die Signalquellen abgesprochene Muster vor (z.B. $ABA$ oder $BAA$) und die Aufgabe der Testperson ist es, zu bestimmen welche Reihenfolge herrschte.
+
+Bei uns war die Länge $l=8.5\si\meter$ und bei unseren zwei Testpersonen lag $s_\text{min}$ zwischen $3.4^\circ$ und $\leq2^\circ$ (bei dieser Messung hatten die Schallquellen keinen Platz mehr, um dichter zueinander zu kommen).
+Falls bessere Bedingungen herrschen (weniger störende Objekte im Raum oder konzentriertere Testpersonen), lassen sich normalerweise noch kleinere Winkel auflösen.
+
+Interessanterweise hat man durch Studien herausgefunden, dass der Mensch gerade in dem Frequenzbereich, in dem er sich am meisten Unterhält ($\nu\approx2\si{\kilo\hertz}$) das schlechteste Auflösungsvermögen besitzt.
+Dies scheint evulutionär erstmal fragwürdig, ist aber physikalisch sinnvoll, da es einer Wellenlänge von $17\si{\centi\meter}$ entspricht, was dem Abstand der Ohren entspricht.
+
+
+\section{dB-Addition}
+Die Lautstärke einer Schallquelle in dB wird durch die verursachten Intensitätsschwankungen des Drucks ($p^2$) berechnet:
+\begin{align*}
+	L=10\log_{10}\left( \frac{\Delta p^2}{p_0^2} \right), \qquad p_0=2\cdot10^{-5}\si\pascal\, .
+\end{align*}
+Dabei ist $p_0$ ein Referenzdruck, den man vermutete als Hörschwelle bei $1\si{\kilo\hertz}$
 
 
 
 
-
-\section{Diskussion}
-\label{sec:diskussion}
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
