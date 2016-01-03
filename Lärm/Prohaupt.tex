@@ -216,9 +216,25 @@ Dies scheint evulutionär erstmal fragwürdig, ist aber physikalisch sinnvoll, d
 \section{dB-Addition}
 Die Lautstärke einer Schallquelle in dB wird durch die verursachten Intensitätsschwankungen des Drucks ($p^2$) berechnet:
 \begin{align*}
-	L=10\log_{10}\left( \frac{\Delta p^2}{p_0^2} \right), \qquad p_0=2\cdot10^{-5}\si\pascal\, .
+	L=10\log_{10}\left( \frac{\Delta p^2}{p_0^2} \right)\si{\deci\bel}, \qquad p_0=2\cdot10^{-5}\si\pascal\, .
 \end{align*}
-Dabei ist $p_0$ ein Referenzdruck, den man vermutete als Hörschwelle bei $1\si{\kilo\hertz}$
+Dabei ist $p_0$ ein Referenzdruckunterschied, den man vermutete als Hörschwelle bei $1\si{\kilo\hertz}$.
+Verdoppelt man die Anzahl der Schallquellen, so steigt der Schallpegel um $10\cdot\log2\;\si{\deci\bel}\approx3\si{\deci\bel}$, da man die doppelte Schallintensität hat ($2\cdot\Delta p^2$).
+Unsere Messungen zeigten dies ungefähr.
+Dass es nicht das genaue Ergebnis war, liegt vermutlich daran, dass dieses Gesetz nur für Punktquellen gilt, wir aber relativ dicht an den Lautsprechern waren.
+Außerdem lag unser Schallmessgerät auf dem Fußboden, der wiederum Schall reflektiert, was ebenfalls zu anderen Ergebnissen führt.
+Wenn man den Abstand zwischen Sender und Empfänger verdoppelt, so veringert sich die Lautstärke um $\SI6{\deci\bel}$, da $\Delta p\propto r^{-2}\;\Rightarrow\;\Delta p^2\propto r^{-4}$ ist.
+Auch dies war in guter Näherung zu erkennen.
+
+Interessant ist jedoch der Fall, bei dem man zwei Schallquellen nimmt und sie gegenphasig polt.
+Rein theoretisch sollte durch destruktive Interferenz die Lautstärke verschwinden.
+Dieses Prinzip wird zum Beispiel bei Antischall-Kopfhörern verwendet.
+Allerdings zeigte sich in unserem Versuch, dass dies nicht perfekt gelang.
+Jedoch ließ sich das Geräusch geringfügig minimieren.
+Dies ist auch in den erwähnten Kopfhörern der Fall, da es natürlich noch schwerer ist, wenn die beiden Schallquellen nicht vom selben Rechner aus gesteuert werden.
+Da in der Realität der zu eliminierende Ton kein Sinus-Ton ist, sondern relativ zufällig und schnell ändernd, und für die kleinen Wellenlängen die Phasenanpassung auch extrem präzise sein muss, dämpfen die Kopfhörer meist nur die niederfrequenten Geräusche.
+Die hohen Töne lassen sich jedoch besser durch das Material des Kopfhörers selber abschirmen, da ihre Dämpfung wesentlich stärker ist.
+Dies konnte man zum Beispiel auch Silvester sehr gut hören, da die Knaller, die weit voneinem gezündet wurden (am besten hörbar war es aus ca. $5\si{\kilo\meter}$ Entfernung) sehr viel dumpfer klangen, als dichter explodierende.
 
 
 
