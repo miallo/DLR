@@ -1,0 +1,183 @@
+% Für Bindekorrektur als optionales Argument "BCORfaktormitmaßeinheit", dann
+% sieht auch Option "twoside" vernünftig aus
+% Näheres zu "scrartcl" bzw. "scrreprt" und "scrbook" siehe KOMA-Skript Doku
+\documentclass[12pt,a4paper,headinclude,bibtotoc]{scrartcl}
+
+
+%---- Allgemeine Layout Einstellungen ------------------------------------------
+
+% Für Kopf und Fußzeilen, siehe auch KOMA-Skript Doku
+\usepackage[komastyle]{scrpage2}
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+\setheadsepline{0.5pt}[\color{black}]
+
+%keine Einrückung
+\parindent0pt
+
+%Einstellungen für Figuren- und Tabellenbeschriftungen
+\setkomafont{captionlabel}{\sffamily\bfseries}
+\setcapindent{0em}
+
+\usepackage{caption}
+
+%---- Weitere Pakete -----------------------------------------------------------
+% Die Pakete sind alle in der TeX Live Distribution enthalten. Wichtige Adressen
+% www.ctan.org, www.dante.de
+
+% Sprachunterstützung
+\usepackage[ngerman]{babel}
+
+% Benutzung von Umlauten direkt im Text
+% entweder "latin1" oder "utf8"
+\usepackage[utf8]{inputenc}
+
+% Pakete mit Mathesymbolen und zur Beseitigung von Schwächen der Mathe-Umgebung
+\usepackage{latexsym,exscale,amssymb,amsmath}
+
+% Weitere Symbole
+\usepackage[nointegrals]{wasysym}
+\usepackage{eurosym}
+
+% Anderes Literaturverzeichnisformat
+%\usepackage[square,sort&compress]{natbib}
+
+% Für Farbe
+\usepackage{color}
+
+% Zur Graphikausgabe
+%Beipiel: \includegraphics[width=\textwidth]{grafik.png}
+\usepackage{graphicx}
+
+% Text umfließt Graphiken und Tabellen
+% Beispiel:
+% \begin{wrapfigure}[Zeilenanzahl]{"l" oder "r"}{breite}
+%   \centering
+%   \includegraphics[width=...]{grafik}
+%   \caption{Beschriftung} 
+%   \label{fig:grafik}
+% \end{wrapfigure}
+\usepackage{wrapfig}
+
+% Mehrere Abbildungen nebeneinander
+% Beispiel:
+% \begin{figure}[htb]
+%   \centering
+%   \subfigure[Beschriftung 1\label{fig:label1}]
+%   {\includegraphics[width=0.49\textwidth]{grafik1}}
+%   \hfill
+%   \subfigure[Beschriftung 2\label{fig:label2}]
+%   {\includegraphics[width=0.49\textwidth]{grafik2}}
+%   \caption{Beschriftung allgemein}
+%   \label{fig:label-gesamt}
+% \end{figure}
+\usepackage{subfigure}
+\usepackage{adjustbox}
+
+% Caption neben Abbildung
+% Beispiel:
+% \sidecaptionvpos{figure}{"c" oder "t" oder "b"}
+% \begin{SCfigure}[rel. Breite (normalerweise = 1)][hbt]
+%   \centering
+%   \includegraphics[width=0.5\textwidth]{grafik.png}
+%   \caption{Beschreibung}
+%   \label{fig:}
+% \end{SCfigure}
+\usepackage{sidecap}
+
+% Befehl für "Entspricht"-Zeichen
+\newcommand{\corresponds}{\ensuremath{\mathrel{\widehat{=}}}}
+
+%Für chemische Formeln (von www.dante.de)
+%% Anpassung an LaTeX(2e) von Bernd Raichle
+\makeatletter
+\DeclareRobustCommand{\chemical}[1]{%
+  {\(\m@th
+   \edef\resetfontdimens{\noexpand\)%
+       \fontdimen16\textfont2=\the\fontdimen16\textfont2
+       \fontdimen17\textfont2=\the\fontdimen17\textfont2\relax}%
+   \fontdimen16\textfont2=2.7pt \fontdimen17\textfont2=2.7pt
+   \mathrm{#1}%
+   \resetfontdimens}}
+\makeatother
+
+%Si Einheiten
+\usepackage{siunitx}
+
+%c++ Code einbinden
+\usepackage{listings}
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
+
+%Differential
+\newcommand{\dif}{\ensuremath{\mathrm{d}}}
+
+%Boxen,etc.
+\usepackage{fancybox}
+\usepackage{empheq}
+
+%Fußnoten auf gleiche Seite
+\interfootnotelinepenalty=1000
+
+%Dateien aus Unterverzeichnissen
+\usepackage{import}
+
+%Bibliography \bibliography{literatur} und \cite{gerthsen}
+%\usepackage{cite}
+\usepackage{babelbib}
+\selectbiblanguage{ngerman}
+
+\begin{document}
+
+\title{Lärm}
+\author{Felix Kurtz}
+\maketitle
+
+\section{Schallortung}
+Zuerst bestimmt man die Wellenlänge einer Schallquelle (reiner Sinuston).
+Dazu werden zwei Mikrophone, die an ein Oszilloskop angeschlossen sind, erst an einander gehalten und dann so weit gegeneinander in Richtung Schallquelle verschoben, dass die beiden Signale wieder in Phase sind.
+Diese Verschiebung entspricht der Wellenlänge $\lambda$.
+Wir maßen $\lambda=1.7\,$cm, also mit der Schallgeschwindigkeit $c=340\,$m/s eine Frequenz $\nu = \frac{c}{\lambda}=20\,$kHz.
+Dies ist für den Menschen unhörbar.
+
+Als nächstes soll eine Schallquelle geortet werden.
+Dazu werden wieder zwei Mikrophone benötigt, die parallel auf einer Schiene angeordnet sind.
+Diese richtet man senkrecht zur zu prüfenden Schallquelle aus.
+Ist man nämlich weit genug von dieser entfernt, sind die Schallwellen ebene Wellen.
+Verschiebt man nun ein Mikro auf der Schiene, ändert also den Abstand zwischen beiden, sollten die beiden immer gleichphasig sein.
+Ändert sich jedoch die Phase, stammt der Schall nicht von dort.
+So konnten wir den angeschalteten Lautsprecher aus 4 Lautsprechern "`heraushören"'.
+
+Der Mensch macht dies so ähnlich, indem der den Kopf leicht dreht.
+So bestimmen wir als nächstes das Hör-Auflösungsvermögen eines Menschen, indem in einem bestimmten  Abstand $l$ zur Testperson zwei Personen $A$ und $B$ mit  Abstand $s$ zueinander bestimmte Signalreihenfolgen (zB.: $AAB$ oder $ABA$) mit gleichen Lärmquellen machen.
+Die Testperson muss diese Reihenfolgen nur durch Hören bestimmen.
+Der kleinste Abstand $s_\text{min}$, bei dem dies möglich ist, bestimmt das Auflösungsvermögen.
+Bei einer Länge $l=8.5\,$m lag $s_\text{min}$ bei unseren zwei Testpersonen zwischen $30\,$cm und $50\,$cm.
+Dies entspricht einer Auflösung zwischen $2^\circ$ und $3.4^\circ$.
+Ist man konzentrierter, kann man normalerweise noch kleinere Winkel auflösen.
+Durch Studien hat man allerdings herausgefunden, dass man bei $\nu\approx 2\,$kHz das schlechteste Auflösungsvermögen besitzt.
+Dies entspricht in etwa einer Wellenlänge von $17\,$cm, also dem Ohrenabstand und ist somit plausibel.
+
+Um Schallquellen zu finden, ist eine sogenannte Schall-Kamera nützlich.
+Diese besteht aus vielen Mikrophonen, die möglichst unregelmäßig angeordnet sind, sodass viele Abstandsverhältnisse realisiert werden können.
+Aus Phasendifferenzen zwischen den einzelnen Mikrophonen lässt sich bestimmen, woher der Schall kommt.
+Dazu legt man diese Informationen über ein zugehöriges Kamerabild.
+Dies nutzt man zum Beispiel, um Lärmquellen bei einem Flugzeug, etc. zu finden und zu eliminieren.
+
+\section{dB-Abhängigkeiten}
+Der Schalldruckpegel in dB einer Schallquelle wird durch die von ihr verursachte Druckschwankung $\Delta p$ berechnet:
+$$ L_p=10\cdot \log_{10} \left(\frac{\Delta p}{p_0}\right),\quad p_0=20\,\mu \si{\pascal}$$
+
+
+Wenn man zwei, gleich laute Schallquellen statt einer hat, erhöht sich der Schalldruckpegel um $3\,$dB, da die Druckschwankung doppelt so groß ist und $10\cdot\log_{10} 2 \approx 3$ gilt.
+Dies konnte im Experiment in etwa verifiziert werden.
+
+Wenn man den Abstand zu einer Schallquelle verdoppelt, sinkt der Schalldruckpegel um $6\,$dB, da $\Delta p \sim r^{-2}$ gilt.
+Auch dies konnten wir nachweisen.
+
+Als letztes wurde der Schalldruckpegel von zwei gleich lauten, reinen Sinus-Schallquellen gemessen, die gegenphasig gepolt sind.
+Dieser ist geringer als der einer Quelle und sollte eigentlich verschwinden.
+Dies konnte jedoch nicht gezeigt werden, da immer ein Hintergrundgeräusch vorhanden ist.
+Man hätte dies nur minimieren können (Messung im Raum der Stille, etc.).
+
+
+\end{document}

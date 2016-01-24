@@ -1,0 +1,16 @@
+Schwingungen mit Frequenz in Hz
+
+6
+30,5
+59
+80,75
+
+
+Resonanzfrequenz (Phasenschub)
+6,06
+
+Flügellänge
+94 & 85cm
+Breite
+10 & 31cm
+Höhe 2mm
