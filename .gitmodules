@@ -1,0 +1,6 @@
+[submodule "DLR"]
+	path = DLR
+	url = https://github.com/binomi/DLR
+[submodule "EXPDLR1"]
+	path = EXPDLR1
+	url = https://github.com/kevin27luedemann/EXPDLR1
