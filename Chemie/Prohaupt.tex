@@ -81,6 +81,8 @@
 % \end{SCfigure}
 \usepackage{sidecap}
 
+\usepackage[version=4]{mhchem}
+
 % Befehl für "Entspricht"-Zeichen
 \newcommand{\corresponds}{\ensuremath{\mathrel{\widehat{=}}}}
 % Befehl für Errorfunction
@@ -167,13 +169,53 @@ Praktikant: &  Michael Lohmann\\
 Da nicht immer genau die Menge an benötigter elektrischer Energie zur verfügung steht, die benötigt wird und gerade regenerative Energien keine konstante Leistung bringen, sind Energiespeicher wichtig.
 Da jegliche Umwandlung zwischen Energieformen immer mit Verlusten verbunden sind und da auch Stromspeicher nur einen geringen Wirkungsgrad haben, wäre eine Speicherung von Wärme wünschenswert.
 
+\section{Strahlungsleistung}
+Ein Versuch, wie er analog auch zur Bestimmung der Strahlungsleistung der Sonne durchgeführt werden kann ist der folgende:
+
+Eine Fläche bekannter Größe wird zunächst durch Sonneneinstrahlung (oder in unserem Fall das Licht einer Lampe) aufgeheizt.
+Die Zeit wird genommen, bis eine bestimmte Temperatur erreicht ist (diese sollte noch im linearen Bereich des Temperaturwachstums liegen).
+Die Leistung wurde mit einem Radius von $r=\SI4{\centi\meter}$ über eine Fläche von
+\begin{align}
+	A=\pi\cdot r^2=\SI{5e-3}{\meter\squared}\label{eq:a}
+\end{align}
+aufgenommen.
+Im Experiment dauerte es $t_s=330\si\second$, um die Platte mit dem Strahler von $\SI{24}{\celsius}$ Raumtemperatur auf eine Endtemperatur von $\SI{74.2}{\celsius}$ zu erhitzen.
+Bei dem zweiten Teil des Versuchs wird mit einer bekannten Leistung die Platte ebenfalls auf diese Temperatur aufgeheizt und die dafür benötigte Zeit $t_\text{el}$ aufgenommen.
+In unserem Fall erheizte die elektrische Heizung mit einer Leistung von $P_\text{el}=150\si\watt$ sie in $19\si\second$auf die selbe Temperatur.
+Die aufgenommene Energie ist in beiden Fällen die selbe, so dass gilt
+\begin{align*}
+	P_\text s\cdot t_\text s=P_\text{el}\cdot t_\text{el}\\
+	\Rightarrow P_\text s=P_\text{el}\frac{t_\text{el}}{t_\text s}=\SI9\watt
+\end{align*}
+Die Solarkonstante ist definiert als eingestrahlte Leistung pro Fläche, was mit \ref{eq:a}
+\begin{align*}
+	S=\frac{P}{A}=\SI{1727}{\watt\per\meter\squared}
+\end{align*}
+ergibt.
+Für die tatsächliche Sonne ist auf der Erdoberfläche mit Solarkonstanten von $\SI{500}{\watt\per\meter\squared}$ bis $\SI{1000}{\watt\per\meter\squared}$ zu rechnen.
+Die Werte schwanken je nach Sonnenstand, da das Licht durch mehr oder weniger Athmosphäre muss und dort gestreut werden kann.
+Desshalb nimmt man den Wert oberhalb der Athmosphäre als Literaturwert, welcher $S_E=\SI{1370}{\watt\per\meter\squared}$ beträgt.
+
+
+
+
+
 \section{sensible Wärmespeicher}
 Sensible Wärmespeicher sind die einfachste Form von Speichern.
 Dabei wird eine Substanz (zum Beispiel Wasser oder ein Stein) erhitzt.
 Die Wärme wird (bestimmt durch die Wärmespeicherkapazität) in die Erhitzung der Masse umgesetzt.
 Da die Speicher zwar günstig sind, jedoch nach Außen hin viel Wärme abstrahlen, sind sie nicht geeignet.
+Um dies zu minimieren, ist es erforderlich, möglichst Stoffe mit einer hohen Wärmekapazität zu nehmen, da diese bei gleicher Energieaufnahme sich weniger erwärmen, was zu weniger Abgabe führt.
 
-Schaut man sich die Temperaturkurve an, wie sich der Körper bei wärmezufuhr erwärmt,so sieht man ein konstantes Wachstum.
+Schaut man sich die Temperaturkurve an, wie sich der Körper bei Wärmezufuhr erwärmt, so sieht man ein konstantes Wachstum.
+Je höher die Wärmekapazität, desto kleiner die Steigung.
+
+Desshalb wird gerne Wasser benutzt, da es eine sehr hohe Kapazität besitzt.
+Allerdings wäre ein Speicher mit Sand interessant, da er in der Wüste natürlich mehr zur verfügung steht.
+
+
+
+
 
 \section{Latentwärmespeicher}
 Latentwärmespeicher sind Speicher, bei denen ein Teil der Wärme in einen Phasenübergang umgesetzt wird.
@@ -183,6 +225,11 @@ Das wohl bekannteste Beispiel hierfür sind Handwärmekissen, welche im "`Normal
 Aktiviert man sie jedoch durch das Knicken eines Plättchens, so erwärmen sie sich auf $58\si\celsius$ und werden fest.
 
 Fügt man so einem Speicher Energie zu, so kann man feststellen, dass die Temperatur zunächst wie beim sensiblen gradlinig ansteigt, kommt es jedoch zur Phasenumwandlung, so bleibt die Temperatur solange konstant, bis alles in der anderen Phase ist.
+
+Dies kann man sehr schön in einem Experiment sehen, bei dem Wasser und Paraffin von $\SI{70}\celsius$ abgekühlt werden.
+Das Wasser wird konstant kälter, wohingegen das Paraffin längere Zeit bei etwa $\SI{55}\celsius$ bleibt, was genau die Schmelztemperatur ist.
+Dadurch ist es erheblich länger warm, als das Wasser (ist sogar schon komplett abgekühlt, bevor das Paraffin das Plateau verlässt).
+.
 
 
 
@@ -194,11 +241,17 @@ Das bekannteste Beispiel hier sind Trockenpäckchen, welche sehr hydrophil sind.
 Was vermutlich weniger bekannt ist, ist dass durch das Binden von Wasser Energie frei wird, da der Stoff mit Kristallwasser weniger potentielle Energie im Gitter besitzt.
 Sind die Trockenpäckchen trocken, so sind die Kügelchen blau und werden weiß/durchsichtig (wie man sie kennt), wenn sie Feuchtigkeit aufgenommen haben.
 
-Interessant ist, dass der Farbverlauf von trocken zu feucht bei <+***************Kupfersulfat******************+> genau anders herum ist.
+Interessant ist, dass der Farbverlauf von trocken zu feucht bei Kupfersulfat genau anders herum ist.
 Dieser Stoff ist vielen vielleicht schon aus der Schule bekannt, wo man eine farblose Substanz bekommt, welche sich bei einigen Tropfen Wasser blau färbt.
 Hält man das Reagenzglas jedoch wieder über den Bunsenbrenner, so entfärbt sich der Stoff wieder.
 Beobachtet man den kälteren oberen Rand des Reagenzglases, so sieht man, wie sich Wasser niederschlägt.
 Dies war zuvor im Kristall als Kristallwasser eingebunden.
+Die ablaufende Reaktion ist
+\begin{align*}
+	\ce{CuSO4 + 5H2O <--> CuSO4 . 5H2O + Energie} 
+\end{align*}
+
+
 
 
 
