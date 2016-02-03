@@ -195,7 +195,7 @@ Hielt man die Hand an diesen Punkt, so merkte man, dass es dort noch deutlich w�
 \section{Erhitzen von Aluminium}
 An diesem Punkt befestigten wir zunächst zwei Aluminiumplatten, wobei eine eine schwarze Beschichtung hatte und die zweite blank war.
 Die dunkle Platte hatte nach den Angaben beim Versuch eine Aufnahme von ungefähr 90\% der eingestrahlten Wärme.
-Dadurch konnte man durch die Formel für die spezifische Wärmespeicherung diese berechnen.
+Dadurch konnte man durch die Formel für die spezifische Wärmespeicherung die Energieaufnahme pro Fläche berechnen, mit deren Hilfe man wiederum die prozentuale Aufnahme der zweiten Platte bestimmen kann.
 Sie gibt an, um wieviel sich ein Stoff mit einer gewissen Masse $m$ erhitzt, wenn an ihm eine gewisse Energiemenge hinzufügt.
 Nimmt man den Literaturwert für Aluminium von $c=\SI{896}{\joule\per\kilo\gram\per\kelvin}$, so kann man damit die eingestrahlte Leistung berechnen.
 Da die Blöcke gleich groß waren, konnte man leicht durch den Temperaturverlauf des zweiten Blocks bestimmen, wie viel Energie von der blanken Oberfläche aufgenomen wird.
@@ -205,10 +205,13 @@ Es ergibt sich die Temperaturkurve aus Abb. \ref{fig:aluSW} woraus sich eine Ste
 	\left( \frac{\Delta T}{\Delta t} \right)_\text{blank}&=\SI{0.330(6)}{\kelvin \per \second}
 \end{align*}
 ergibt.
-Die Masse der Blöcke von $m_\text s= \SI{0.0506}{\kilo\gram}$ und $m_\text b = \SI{0.0519}{\kilo\gram}$ ergibt sich eine Leistung von
+Die Masse der Blöcke von $m_\text s= \SI{0.0506}{\kilo\gram}$ und $m_\text b = \SI{0.0519}{\kilo\gram}$ ergibt sich eine Leistung $Q$ der Quelle und ein Absorptionskoeffizient $\alpha$ der blanken Platte von
 \begin{align*}
-	90\% \frac{Q}{A} = c\cdot  \frac{\Delta T}{\Delta t}\cdot \Delta t \cdot \frac{m}{A}
-\end{align*}<++>
+	90\% Q &= c\cdot  \frac{\Delta T}{\Delta t}\cdot \frac{m}{A} = \SI{7100}{\watt}\\
+	\Rightarrow \alpha &= 57\%
+\end{align*}
+
+Die silberne Platte strahlt also 43\% des Lichts sofort wieder ab.
 
 \begin{figure}[h]
 	\centering
