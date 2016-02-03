@@ -108,6 +108,8 @@
 %SI-Package
 \usepackage{siunitx}
 
+\usepackage{url}
+
 %keine Einrückung, wenn Latex doppelte Leerzeile
 \parindent0pt
 
@@ -116,6 +118,7 @@
 \usepackage{babelbib}
 \selectbiblanguage{ngerman}
 
+\urldef{\spezWaerme}\url{https://de.wikibooks.org/w/index.php?title=Tabellensammlung_Chemie/_spezifische_W%C3%A4rmekapazit%C3%A4ten&oldid=767420}
 \begin{document}
 
 \begin{titlepage}
@@ -157,8 +160,6 @@ Praktikant: &  Michael Lohmann\\
 \end{Large}
 
 \end{titlepage}
-
-\tableofcontents
 
 \newpage
 
@@ -228,13 +229,18 @@ Allerdings stellte sich in unserem zweiten Versuch heraus, dass das Wasser die W
 Dies äußerte sich darin, dass die beiden Behälter, welche zu Beginn des Experimentes annähernd gleich warm waren und der selben Strahlungsleistung ausgesetzt waren schnell sehr unterschiedliche Temperaturen hatten.
 Die Steigungen von \ref{fig:wassersand} betragen
 \begin{align*}
-	\left( \frac{\Delta T}{\Delta t} \right)_\text{Wasser}&=\SI{0.180(6)}{\kelvin \per \second}\\
-	\left( \frac{\Delta T}{\Delta t} \right)_\text{Sand}&=\SI{0.057(2)}{\kelvin \per \second}
+	\left( \frac{\Delta T}{\Delta t} \right)_\text{Wasser}&=\SI{0.057(2)}{\kelvin \per \second}\\
+	\left( \frac{\Delta T}{\Delta t} \right)_\text{Sand}&=\SI{0.180(6)}{\kelvin \per \second}
 \end{align*}
-woraus sich Werte von
+woraus sich (da die gleichen Massen und Oberflächen vorhanden sind) ein Verhältnis der spezifischen Wärmespeicherkoeffizienten von
 \begin{align*}
-	<+HIER WICHTIGE SACHEN EINTRAGEN+>	
-\end{align*}<++>
+	\frac{c_\text{Wasser}}{c_\text{Sand}}=3.16
+\end{align*}
+
+Dies bedeutet, dass Wasser bei gleicher Temperaturerhöhung mehr als die dreifache Energiemenge aufnehmen kann.
+Nimmt man die Literaturwerte nach\footnote{\spezWaerme}, so soll Wasser $c_\text{Wasser}=\SI{4.186}{\kelvin \per \second}$ und $q_\text{Sand}=\SI{0.835}{\kelvin \per \second}$ besitzen.
+Dies würde einem Verhältnis von $5.01$ entsprechen.
+Allerdings hängt die Konstante vom Sand mit Sicherheit von extrem vielen Faktoren wie Korngröße und Dichte ab.
 
 \begin{figure}[h]
 	\centering
