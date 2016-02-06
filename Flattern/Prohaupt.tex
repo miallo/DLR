@@ -158,8 +158,6 @@ Praktikant: &  Michael Lohmann\\
 
 \end{titlepage}
 
-\tableofcontents
-
 \newpage
 
 \section{Einleitung}
@@ -192,21 +190,36 @@ Es ergeben sich die drei Fälle aus Abb. \ref{fig:daempfung}
 
 Das erste Problem ist die schlechte Tarierung der Klappen.
 Dies bedeutet, dass die Klappen von alleine nicht in die $0^\circ$-Lage, sondern nach unten fallen.
-Dies sorgt jedoch durch Anströmung dafür, dass eine Kraft die Klappen wirkt, welche sie wieder nach oben drückt.
-Eine mögliche Lösung ist ein Gegengewicht, was dafür sorgt, dass die Klappe in der Ruhelage nicht ausgelenkt ist.
-Dies konnten wir überprüfen, indem wir ein Ruder hatten mit einem verstellbaren Gegengewicht.
+Dies sorgt jedoch durch Anströmung dafür, dass eine Kraft auf die Klappen wirkt, welche sie wieder nach oben drückt.
+Generell ist ein Flugzeug zwar ersteinmal stabil, auch mit nicht perfekt tarierten klappen, jedoch kann eine kleine Störung, wie das versehentliche gegenkommen gegen den Steuerknüppel als Störung ausreichen, um es in einen instabilen Zustand zu bringen.
+Eine mögliche Lösung ist ein Gegengewicht, was dafür sorgt, dass die Klappen in der Ruhelage nicht ausgelenkt sind.
+Dies konnten wir überprüfen, indem wir ein Ruder mit einem verstellbaren Gegengewicht hatten.
 Es stellte sich heraus, dass es auch bei deutlich höheren Geschwindigkeiten nicht ins Flattern geriet.
 
 
+
 \section{Schwingungsmoden-Analyse}
-Um genauere Analysen zu machen, was genau für Schwingungen im Flügel auftreten, umströmten wir keinen Flügel mehr mit Klappen, sondern versetzten einen Flügelrumpf mit einem Motor in Vibration.
+Um genauere Analysen zu machen, was für Schwingungen im Flügel auftreten, umströmten wir keinen Flügel mehr mit Klappen, sondern versetzten einen Flügelrumpf aus 4mm Stahl mit einem Motor in Vibration.
 Dadurch konnten wir durch den angebrachten Beschleunigungssensor genau die Antwort des Flügels auf bestimmte Frequenzen untersuchen.
+Dessen Signal wird fouriertransformiert, wodurch sich die verschiedenen Schwingungen, welche vorhanden sind darstellen lässt.
+Die jeweilige intensität, mit der eine Schwingung auftritt ist in der höhe des Signals an der Stelle zu sehen.
+Trifft man nun beim Anregen des Modells eine Resonanzfrequenz, so erhöht sich die Amplitude des Signals erheblich.
+Dies kommt, da der Vibrationsmotor genau im richtigen Moment gegen den Flügel drückt.
+Ist dessen Frequenz beispielsweise zu hoch, so drückt der Motor in dem Moment schon wieder hoch, während der Flügel sich noch herunter bewegt, was ihn abbremst.
+In der Nähe der Resonanzfrequenz wächst die Schwingung jedoch stark an.
+Mit ein bisschen Gefühl kann man nun die anregende Frequenz so einstellen, dass das Signal stark ist.
+Dabei muss man aufpassen, dass die Amplitude nicht zu groß wird, was man durch die Stärke der Anregung beeinflussen kann.\newline\newline
+
 Als weitere (qualitative) Methode ließ sich Sand auf den Flügel streuen.
 An den Stellen, wo der Flügel vibriert, springt der Sand und verlässt diese längerfristig.
 An den Knotenpunkten bewegt sich der Flügel jedoch kaum, wodurch der Sand liegenbleibt.
 Dadurch kann man optisch sehr schön feststellen, was für Schwingungsmoden gerade vorliegen.
 Auch kann man damit die Resonanzfrequenz trimmen, da an ihr die Sandstreifen die schärfsten Ränder haben.
 Punktuell kan man die Schwingungen auch mit dem Finger überprüfen, da diese sehr empfindlich gegenüber Vibrationen sind.
+Interessanterweise bilden sich bei den verschiedenen Resonanzfrequenzen unterschiedliche Linien heraus.
+Dies ist auch zu erwarten, da der Flügel entlang der langen Seite eine niedrigere Frequenz hat, mit einer Schwingung zu schwingen, als entlang der kurzen Seite.
+Zu beachten ist jedoch immer, dass die Sandstreifen immer senkrecht zu den tatsächlichen Schwingungen sind.
+\newpage
 
 \section{Simulation von Schwingungsmoden}
 Bei dem Versuch haben wir eine Computersimulation des Modellflügels gesehen.
@@ -216,8 +229,7 @@ Dadurch wird das Problem für den Computer handhabbar.
 Für diese Simulation wurde das Programm \textit{LISA} verwendet.
 Es ist eine Freeware, welche die Simulationssoftware bereitstellt.
 Bei der Simulation mit den aufgenommenen Werten für den Modell-Flügel kamen wir jedoch auf andere Ergebnisse für die Schwingungsfrequenzen.
-Dies steht im Widerspruch zu den Ergebnissen der Simulation, die wir vor Ort gesehen haben.
-Diese passten fast perfekt zu dem realen Flügel.
+Dies steht im Widerspruch zu den Ergebnissen der Simulation, die wir vor Ort gesehen haben, welche fast perfekt zu dem realen Flügel passte.
 
 
 
